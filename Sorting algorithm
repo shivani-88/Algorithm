@@ -1,0 +1,55 @@
+/*
+Pseudo Code:
+void selectionSort(int a[], int n) {
+   int i, j, min, temp;
+   for (i = 0; i < n - 1; i++) {
+      min = i;
+      for (j = i + 1; j < n; j++)
+      if (a[j] < a[min])
+      min = j;
+      temp = a[i];
+      a[i] = a[min];
+      a[min] = temp;
+   }
+}
+In the above program, selectionSort() is a function that
+sorts the array a[] using selection sort. There are two for
+loops in selectionSort(). In each iteration of the outer for
+loop, the minimum element in the remaining array after i is 
+found and then interchanged with the element currently at i.
+This is repeated until the array is sorted. 
+
+In the main() function, the array a[] is defined. Then the
+function selectionSort() is called with the array a[] and its
+size n. Finally, the sorted array is displayed.
+*/
+
+
+// Actual Code:
+#include <bits/stdc++.h>
+using namespace std;
+void selectionSort(int arr[], int n) {
+    int i, j, min, temp;
+    for (i = 0; i < n - 1; i++) {
+      min = i;
+      for (j = i + 1; j < n; j++)
+      if (a[j] < a[min])
+      min = j;
+      temp = a[i];
+      a[i] = a[min];
+      a[min] = temp;
+}
+int main() {
+int arr[] = {83, 1, 45, 95, 45, 52, 11, 47, 0, 45, 67, 8);
+int n = sizeof(a)/ sizeof(a[0]);
+int i;
+cout<<"Given array is:"<<endl;
+for (i = 0; i < n; i++)
+   cout<< a[i] <<" ";
+   cout<<endl;
+selectionSort(arr, n);
+printf("\nSorted array is: \n");
+for (i = 0; i < n; i++)
+   cout<< a[i] <<" ";
+return 0;
+}
